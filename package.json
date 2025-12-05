@@ -2,10 +2,12 @@
   "name": "event-management",
   "version": "1.0.0",
   "description": "Chennai Event Management Service",
-  "main": "server.js",
+  "type": "module",
   "scripts": {
+    "dev": "node server.js",
     "start": "node server.js",
-    "dev": "node server.js"
+    "build": "echo 'Static files ready for deployment'",
+    "preview": "node server.js"
   },
   "dependencies": {
     "express": "^4.18.2"
