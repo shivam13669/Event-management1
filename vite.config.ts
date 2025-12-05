@@ -4,7 +4,7 @@ import fs from 'fs'
 import path from 'path'
 import type { ViteDevServer } from 'vite'
 
-const STATIC_EXTENSIONS = ['.css', '.js', '.json', '.webp', '.svg', '.png', '.jpg', '.jpeg', '.gif', '.ico', '.woff', '.woff2', '.ttf', '.eot', '.map']
+const eventDir = path.resolve(process.cwd(), 'Event/www.chennaieventmanagementservice.com')
 
 export default defineConfig({
   plugins: [
@@ -13,69 +13,67 @@ export default defineConfig({
       name: 'serve-event-files',
       configureServer(server: ViteDevServer) {
         return () => {
+          // Use 'pre' to run before other middlewares
           server.middlewares.use((req, res, next) => {
-            try {
-              const url = req.url?.split('?')[0] || '/'
-              const eventDir = path.join(process.cwd(), 'Event/www.chennaieventmanagementservice.com')
-              
-              // First, try the URL as-is
-              let filePath = path.join(eventDir, url === '/' ? 'index.html' : url)
-              
-              if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
-                const content = fs.readFileSync(filePath)
-                const ext = path.extname(filePath)
-                const mimeTypes: Record<string, string> = {
-                  '.html': 'text/html; charset=utf-8',
-                  '.css': 'text/css',
-                  '.js': 'application/javascript',
-                  '.json': 'application/json',
-                  '.webp': 'image/webp',
-                  '.svg': 'image/svg+xml',
-                  '.png': 'image/png',
-                  '.jpg': 'image/jpeg',
-                  '.jpeg': 'image/jpeg',
-                  '.gif': 'image/gif',
-                  '.ico': 'image/x-icon',
-                  '.woff': 'font/woff',
-                  '.woff2': 'font/woff2',
-                  '.ttf': 'font/ttf',
-                  '.eot': 'application/vnd.ms-fontobject',
-                  '.map': 'application/json',
-                }
-                res.setHeader('Content-Type', mimeTypes[ext] || 'application/octet-stream')
-                res.end(content)
-                return
-              }
+            if (!req.url) return next()
+            
+            const url = req.url.split('?')[0]
+            let filePath = path.join(eventDir, url === '/' ? 'index.html' : url)
 
-              // If it has an extension but doesn't exist, pass to next
-              if (path.extname(url)) {
-                next()
-                return
-              }
-
-              // If it's a directory request, try index.html
-              if (url.endsWith('/')) {
-                filePath = path.join(eventDir, `${url}index.html`)
-                if (fs.existsSync(filePath)) {
-                  res.setHeader('Content-Type', 'text/html; charset=utf-8')
-                  res.end(fs.readFileSync(filePath))
+            // Check if file exists
+            if (fs.existsSync(filePath)) {
+              const stat = fs.statSync(filePath)
+              
+              if (stat.isFile()) {
+                try {
+                  const content = fs.readFileSync(filePath)
+                  const ext = path.extname(filePath).toLowerCase()
+                  
+                  const mimeTypes: Record<string, string> = {
+                    '.html': 'text/html; charset=utf-8',
+                    '.css': 'text/css; charset=utf-8',
+                    '.js': 'application/javascript',
+                    '.json': 'application/json',
+                    '.webp': 'image/webp',
+                    '.svg': 'image/svg+xml',
+                    '.png': 'image/png',
+                    '.jpg': 'image/jpeg',
+                    '.jpeg': 'image/jpeg',
+                    '.gif': 'image/gif',
+                    '.ico': 'image/x-icon',
+                    '.woff': 'font/woff',
+                    '.woff2': 'font/woff2',
+                    '.ttf': 'font/ttf',
+                    '.eot': 'application/vnd.ms-fontobject',
+                    '.map': 'application/json',
+                  }
+                  
+                  res.setHeader('Content-Type', mimeTypes[ext] || 'application/octet-stream')
+                  res.end(content)
                   return
+                } catch (err) {
+                  console.error('Error reading file:', err)
                 }
               }
-
-              // Try adding .html extension
-              filePath = path.join(eventDir, `${url}.html`)
-              if (fs.existsSync(filePath)) {
-                res.setHeader('Content-Type', 'text/html; charset=utf-8')
-                res.end(fs.readFileSync(filePath))
-                return
-              }
-
-              next()
-            } catch (error) {
-              console.error('Middleware error:', error)
-              next()
             }
+
+            // If URL has no extension, try adding .html
+            if (!path.extname(url)) {
+              const htmlPath = path.join(eventDir, url === '/' ? 'index.html' : `${url}.html`)
+              
+              if (fs.existsSync(htmlPath)) {
+                try {
+                  const content = fs.readFileSync(htmlPath)
+                  res.setHeader('Content-Type', 'text/html; charset=utf-8')
+                  res.end(content)
+                  return
+                } catch (err) {
+                  console.error('Error reading file:', err)
+                }
+              }
+            }
+
+            next()
           })
         }
       },
