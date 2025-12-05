@@ -2,46 +2,72 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import fs from 'fs'
 import path from 'path'
+import type { ViteDevServer } from 'vite'
 
 export default defineConfig({
   plugins: [
     react(),
     {
       name: 'serve-event-files',
-      configureServer(server) {
+      configureServer(server: ViteDevServer) {
         return () => {
           server.middlewares.use((req, res, next) => {
-            const url = req.url?.split('?')[0] || '/'
-            
-            if (url === '/' || url === '') {
-              const filePath = path.join(process.cwd(), 'Event/www.chennaieventmanagementservice.com/index.html')
-              res.setHeader('Content-Type', 'text/html')
-              res.end(fs.readFileSync(filePath))
-              return
-            }
+            try {
+              const url = req.url?.split('?')[0] || '/'
+              const eventDir = path.join(process.cwd(), 'Event/www.chennaieventmanagementservice.com')
+              let filePath = path.join(eventDir, url === '/' ? 'index.html' : url)
 
-            if (!url.includes('.') || url.includes('.html')) {
-              let filePath = path.join(process.cwd(), `Event/www.chennaieventmanagementservice.com${url}`)
-              if (!filePath.endsWith('.html') && fs.existsSync(filePath + '.html')) {
-                filePath = filePath + '.html'
-              }
-
-              if (fs.existsSync(filePath) && filePath.endsWith('.html')) {
-                res.setHeader('Content-Type', 'text/html')
-                res.end(fs.readFileSync(filePath))
-                return
-              }
-            }
-
-            if (url.startsWith('/assets/') || url.includes('.css') || url.includes('.js') || url.includes('.webp') || url.includes('.svg') || url.includes('.png')) {
-              const filePath = path.join(process.cwd(), `Event/www.chennaieventmanagementservice.com${url}`)
               if (fs.existsSync(filePath)) {
-                res.end(fs.readFileSync(filePath))
-                return
-              }
-            }
+                const stat = fs.statSync(filePath)
+                if (stat.isFile()) {
+                  const content = fs.readFileSync(filePath)
+                  const ext = path.extname(filePath)
+                  
+                  const mimeTypes: Record<string, string> = {
+                    '.html': 'text/html',
+                    '.css': 'text/css',
+                    '.js': 'application/javascript',
+                    '.json': 'application/json',
+                    '.webp': 'image/webp',
+                    '.svg': 'image/svg+xml',
+                    '.png': 'image/png',
+                    '.jpg': 'image/jpeg',
+                    '.jpeg': 'image/jpeg',
+                    '.gif': 'image/gif',
+                    '.ico': 'image/x-icon',
+                    '.woff': 'font/woff',
+                    '.woff2': 'font/woff2',
+                    '.ttf': 'font/ttf',
+                    '.eot': 'application/vnd.ms-fontobject',
+                  }
 
-            next()
+                  res.setHeader('Content-Type', mimeTypes[ext] || 'application/octet-stream')
+                  res.end(content)
+                  return
+                }
+              }
+
+              if (url.endsWith('/') || url === '') {
+                filePath = path.join(eventDir, url === '/' ? 'index.html' : `${url}index.html`)
+                if (fs.existsSync(filePath)) {
+                  res.setHeader('Content-Type', 'text/html')
+                  res.end(fs.readFileSync(filePath))
+                  return
+                }
+              } else if (!url.includes('.')) {
+                filePath = path.join(eventDir, `${url}.html`)
+                if (fs.existsSync(filePath)) {
+                  res.setHeader('Content-Type', 'text/html')
+                  res.end(fs.readFileSync(filePath))
+                  return
+                }
+              }
+
+              next()
+            } catch (error) {
+              console.error('Middleware error:', error)
+              next()
+            }
           })
         }
       },
