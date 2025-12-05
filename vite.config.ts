@@ -9,6 +9,9 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const eventDir = path.join(__dirname, 'Event/www.chennaieventmanagementservice.com')
 
+console.log('Event dir configured as:', eventDir)
+console.log('Event dir exists:', fs.existsSync(eventDir))
+
 export default defineConfig({
   plugins: [
     react(),
@@ -22,12 +25,15 @@ export default defineConfig({
             const url = req.url.split('?')[0]
             let filePath = path.join(eventDir, url === '/' ? 'index.html' : url)
 
+            console.log(`[DEBUG] URL: ${url}, FilePath: ${filePath}, Exists: ${fs.existsSync(filePath)}`)
+
             try {
               // Check if file exists
               if (fs.existsSync(filePath)) {
                 const stat = fs.statSync(filePath)
                 
                 if (stat.isFile()) {
+                  console.log(`[DEBUG] Serving file: ${filePath}`)
                   const content = fs.readFileSync(filePath)
                   const ext = path.extname(filePath).toLowerCase()
                   
@@ -61,6 +67,7 @@ export default defineConfig({
                 const htmlPath = path.join(eventDir, url === '/' ? 'index.html' : `${url}.html`)
                 
                 if (fs.existsSync(htmlPath)) {
+                  console.log(`[DEBUG] Serving HTML file: ${htmlPath}`)
                   const content = fs.readFileSync(htmlPath)
                   res.setHeader('Content-Type', 'text/html; charset=utf-8')
                   res.end(content)
@@ -71,6 +78,7 @@ export default defineConfig({
               console.error('Middleware error:', err)
             }
 
+            console.log(`[DEBUG] Passing to next middleware for: ${url}`)
             next()
           })
         }
