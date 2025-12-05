@@ -1,0 +1,412 @@
+
+.breadcrumbs-sections {
+    background: #010101;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding: 5rem 0;
+    z-index: 1;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+        background-image: url(../images/bg/budget-wedding-banquet-hall-scaled.webp);
+}
+label.error{
+    color:red;
+    transform: translateY(-19px);
+    font-size:13px;
+}
+.breadcrumbs-sections::before {
+    opacity: 0.9;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #000000 42%, #00000080 50%, rgb(255 255 255 / 0%) 60%);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.brudembs-menus h1 {
+        font-size: 38px;
+    color: #ffffff;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 20px;
+    max-width: 70%;
+}
+
+.breadcrumb-list-menu {
+    padding: 10px 10px;
+    background: #ffffff;
+    display: inline-block;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+    z-index: 9;
+    padding-left:0;
+        padding: 3px 10px;
+}
+.breadcrumb-list-menu li:after {
+      content: "\f10d";
+    margin-left: 7px;
+    font-weight: 600;
+    font-size: 17px;
+    color: #e65402;
+    font-family: flaticon_normal-icon !important;
+    top: 4px;
+    position: relative;
+}
+.breadcrumb-list-menu li:last-child:after {
+  content: "";
+}
+
+.breadcrumb-list-menu li {
+    display: inline-block;
+    font-size:13px;
+}
+.breadcrumb-list-menu li+.breadcrumb-list-menu li {
+    padding-left: 0.5rem;
+}
+
+.breadcrumb-list-menu .active{
+    color:#e65402;
+}
+
+
+
+.our-services-sectionb{
+    position:relative;
+    padding:3rem 0 0;
+}
+.our-servcies-img{
+    text-align:center;
+            margin: 20px 0 0;
+}
+.our-servcies-img img {
+    margin: 0;
+}
+.our-services-paaragrph p{
+    margin:0 0 20px;
+}
+
+
+.our-planning-service{
+        padding: 3rem 0 3rem;
+    position: relative;
+    }
+    
+    .our-planning-service .sec-big-title.text-center{
+           margin-bottom: 0;
+    }
+    .planning-service-swiper .swiper-wrapper{
+        align-items: stretch;
+    }
+    .planning-service-swiper .swiper-slide{
+        display: flex;
+      height: auto !important;
+    }
+    
+    .planning-outr-box{
+     padding: 40px;
+     /*background: #e6540238;*/
+    background:#e6540221;
+     border-radius:20px;
+     height:100%;
+     position:relative;
+    }
+
+    .planning-outr-box p{
+        margin:0;
+    }
+    .planning-outr-box .title{
+        font-size:21px;
+        font-weight:600;
+        text-align:center;
+    }
+    
+    .planning-service-swiper .swiper-wrapper{
+        margin:50px 0;
+    }
+    
+   .planning-service-swiper .swiper-pagination-bullet-active{
+            background: #e65402;
+    }
+
+
+.our-why-chooseus {
+    position: relative;
+    padding: 4rem 0 5rem;
+background-color: #fce9de;
+}
+.our-why-chooseus .row{
+    row-gap:30px;
+}
+.why-chooseus-bocx{
+    position: relative;
+    padding: 20px 30px 30px;
+    background:#fff;
+    border-radius: 30px;
+    transition: transform 0.3s ease; 
+    box-shadow: 0 0 40px 5px rgb(0 0 0 / 5%);
+    height: 100%;
+}
+
+.choose-cons {
+  position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50px 0 50px 50px;
+    background: var(--primary-color);
+    border: 2px solid #000;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.why-chooseus-bocx:hover .choose-cons img {
+  transform: rotate(360deg); /* Rotate the image 360 degrees */
+}
+
+.choose-cons img {
+    width: 35px !important;
+    filter: brightness(0) invert(1);
+    display: block;
+  transition: transform 0.3s ease; /* Smooth transition for the image */
+}
+
+
+.our-why-chooseus .why-chooseus-bocx:hover {
+    border-color:var(--primary-color);
+}
+/*.why-us-contetn {*/
+/*    margin-top: 25px;*/
+/*}*/
+.why-us-contetn h4 {
+      color: #000;
+    font-size: 22px;
+    margin: 0;
+    max-width: 75%;
+}
+.why-us-contetn p {
+       color: #000;
+    margin: 17px 0 0;
+    max-width: 92%;
+}
+
+.site-icon-aac {
+    position: fixed;
+    top: 50%;
+    right: 6px;
+    z-index: 1;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whatsapp img{
+   filter: invert(43%) sepia(61%) saturate(7487%) hue-rotate(337deg) brightness(107%) contrast(112%);
+}
+.whatsapp{
+    position:relative;
+    background-color:#fff;
+    border-radius: 20px;
+    /*display:none;*/
+}
+.call.whatsapp{
+     display:none;
+}
+.cta-evnt-content .btns-wp{
+    background: #25D366;
+       padding-right: 16px;
+}
+.cta-evnt-content .btns-ca{
+    background:#ff0000;
+    padding-right: 16px;
+}
+
+.cal-swedt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+ 
+
+
+.event-managemt-contadf {
+  padding: 3rem 0 3rem;
+}
+
+.event-managemt-contadf .contact-info_item {
+    position:relative;
+  margin: 0;
+      background-color: #000;
+  /*background: url(../images/bg/bg.png);*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+  /*background-position: center center;*/
+  border-radius: 20px;
+}
+.our-contact-grfdm {
+    position:relative;
+    background: #fff;
+    padding: 2rem 2rem;
+    box-shadow: 0 0 40px 5px rgb(0 0 0 / 5%);
+}
+.our-contacus-fomsec {
+    position:relative;
+    padding:0 0 3rem;
+}
+.our-contacus-fomsec .contact-form-box {
+  padding: 0; 
+  background: transparent;  
+  border-radius: 20px;
+}
+
+.our-contacus-fomsec .form-box input, .our-contacus-fomsec .form-select {
+  width: 100%;
+  margin-bottom: 20px;
+  /*padding: 20px 20px;*/
+  padding: 13px 18px;
+  outline: 0;
+  font-size: 15px;
+  color: #041c33;
+  font-weight: 400;
+  /*height: 58px;*/
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid rgba(27,52,52,0.1);
+}
+.our-contacus-fomsec .form-box input::placeholder {
+  color: #868681;
+} 
+.our-contacus-fomsec .form-box input:focus, button:focus {
+  outline-color: #041c33 !important;
+  border: 1px solid #041c33 !important;
+}
+.our-contacus-fomsec .form-box textarea {
+  width: 100%;
+  height: 150px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: 1px solid rgba(27,52,52,0.1);
+  padding: 12px 20px 0;
+}
+.our-contacus-fomsec .form-box textarea::placeholder {
+  color: #868681;
+}
+.contact-service-box {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  padding: 60px 0 0;
+}
+.contact-service-box:before {
+  position: absolute;
+  right: 0;
+  top: 92px;
+  content: '';
+  width: 2px;
+  height: 130px;
+  background-color: rgba(255,255,255,0.5019607843137255);
+}
+.contact-service-box.last:before {
+  display: none;
+}
+
+.contact-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffff;
+  padding-bottom: 50px;
+  margin-bottom: 45px;
+}
+
+.contact-title h5 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #65677a;
+}
+
+.contact-icon img{
+  position: relative;
+  z-index: 1;
+}
+.contact-icon {
+  width: 80px;
+  height: 80px;
+ line-height: 89px;
+    text-align: center;
+    border-radius: 100%;
+    background-color: #ffff;
+    display: inline-block;
+    font-size: 33px;
+    color: #e65402;
+  position: relative;
+} 
+.contact-address {
+    position: relative;
+    margin: 30px 0 0;
+}
+
+.contact-address p{
+    margin:0;
+}
+.contact-icon:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  z-index: 1;
+  top: -10px;
+  left: -10px;
+  margin: auto;
+  right: 0;
+  border: 2px solid #ffff;
+  text-align: center;  
+}
+.contact-address h4{
+  margin: 30px 0 12px;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.contact-address a {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.our-services-paaragrph p {
+    margin: 0 0 10px;
+    text-align: justify;
+}
+
+.endrirt {
+    position: relative;
+    padding: 4rem 0 3rem;
+}
+
+.endrirt .align-items-center{
+    justify-content: center;
+}
+.endrirt .sec-small-title{
+        width: 100%;
+    text-align: center;
+    justify-content: center;
+}

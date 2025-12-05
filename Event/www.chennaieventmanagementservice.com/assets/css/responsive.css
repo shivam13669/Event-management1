@@ -1,0 +1,1294 @@
+@media (max-width:768px) {
+    body{
+            overflow-x: clip;
+    }
+    p {
+    font-size: 13px;
+    line-height: 1.6;
+}
+    .main-header .header-btn{
+            display: none;
+    }
+    .main-header img{
+        width:120px;
+    }
+    .top-bar{
+           display: none;
+    }
+   /*.main-header .nav-links{*/
+   /*  display: none !important;*/
+   /* }*/
+    
+.banne-rtitlsd {
+    font-size:30px;
+    max-width: unset;
+    margin: 0 auto 100px;
+    line-height: 1.2;
+}
+    
+.hero-section {
+   min-height: 0;
+}  
+ .hero-content {
+     min-height: 39vh;
+ }   
+
+ .hero-section .swiper-pagination-bullet {
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+ }   
+    
+  .abt-event-sec .col-lg-5{
+      text-align: center;
+  } 
+  .abt-event-sec {
+    padding: 2.5rem 0 .5rem;
+    overflow: hidden;
+}
+.weding {
+    padding: 3rem 0;
+    position: relative;
+}
+.mission-vuisson {
+    padding: 0 0 2rem;
+    position: relative;
+}
+.msiion {
+        padding: 23px;
+    border-bottom: 2px solid #e65402;
+}
+.mission-vuisson .row{
+    row-gap:15px;
+}
+.new-standres {
+          padding: 0 0 0;
+        position: relative;
+}
+.personal-famuly{
+        padding: 18px;
+}
+.personal-famuly h4 {
+    font-size: 17px;
+}
+.brandung {
+            padding: 15px;
+        text-align: center;
+        width: 102px;
+    }
+.brandung img{
+        width: 32px;
+}
+.brandung h4 {
+          margin: 0;
+        font-size: 12px;
+}
+.brandung img {
+    width: 32px;
+    
+}
+.sustaibility{
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+ .servicsesd {
+    padding: 2rem 0 3rem;
+} 
+.servicsesd .swiper-button-next, .servicsesd .swiper-button-prev {
+        top: 104%;
+        left: 196px;
+    }
+.img-right { 
+    margin: 30px 0;
+}
+ .img-right:before{
+     display:none;
+ }   
+  .ser-csr-overlays h4 {
+           font-size: 14px;
+        margin: 20px 0 11px;
+}  
+.deqaler-meety .row {
+    row-gap: 0;
+}
+ .ser-cardsd img {
+    height: auto;
+    object-fit: contain;
+}
+.servicsesd .swiper-button-next {
+    right: 10px;
+}
+.servicsesd .swiper-button-prev {
+        left: 153px;
+    }
+.ser-csr-overlays{
+    padding:0;
+    position: relative;
+    background: unset;
+    left:unset;
+    right:unset;
+}
+ .our-servcies-img {
+    text-align: center;
+    margin: 20px 0 0;
+}  
+.deqaler-meety {
+          padding: 2rem 0 0;
+        position: relative;
+}
+.brudembs-menus h1 {
+           font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 9px;
+        text-align: center;
+        max-width: unset;
+}
+.breadcrumbs-sections{
+    padding: 4rem 0;
+}
+.breadcrumbs-sections::before{
+    background: #000000ab;
+}
+.breadcrumb-list-menu li a{
+    color:#fff;
+}
+.breadcrumb-list-menu {
+    text-align:center;
+ background: unset;
+ padding:unset;
+}
+.page-breadcrumb {
+            text-align: center;
+        display: block;
+}
+.sec-big-title {
+   font-size: 22px;
+        text-align: center !important;
+}
+.section-title {
+    text-align: center;
+}
+.abt-event-sec .sec-big-title {
+    font-size: 22px;
+}
+.sec-big-title.text-center {
+   margin-bottom: 1.9rem;
+}
+.our-services-sectionb {
+    padding: 2rem 0 0;
+}
+.our-services-sectionb .sec-big-title.text-center {
+        margin-bottom: 1.1rem;
+    }
+.planning-outr-box{
+    padding:17px;
+}
+.planning-outr-box .title{
+    font-size: 17px;
+}
+.our-planning-service {
+    padding: 2rem 0 2rem;
+}
+.clients-ser-list li {
+    font-size: 14px;
+}
+.ideal-clientt{
+    padding: 17px;
+}
+.clients-ser-list li:before {
+    font-size: 10px;
+    left: 7px;
+    top: 3px;
+}
+.sectorss-icon img{
+   width: 33px;
+}
+.service-icon {
+    font-size: 16px;
+    font-weight: 600;
+}
+.organise-evntss {
+    padding: 2rem 0;
+}
+/*.organise-evntss .row{*/
+/*    flex-direction: column-reverse*/
+/*}*/
+.our-services-paaragrph p{
+    text-align:justify;
+}
+.how-weee {
+    margin-left: unset;
+    max-width: unset;
+}
+.organise-evntss .service-icon {
+    font-size: 16px;
+    margin-bottom: 11px;
+}
+.consultion span{
+          height: 26px;
+        width: 26px;
+        font-size: 14px;
+}
+.our-why-chooseus {
+   padding: 3rem 0 3rem;
+}
+.our-why-chooseus .row {
+    row-gap: 20px;
+}
+.why-chooseus-bocx{
+    padding: 19px 23px 23px;
+}
+.why-us-contetn h4{
+    font-size: 16px;
+}
+.evnt-planerss .row {
+    row-gap: 15px;
+}
+.choose-cons{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+}
+.choose-cons img{
+          width: 24px !important;
+}
+.why-us-contetn p {
+    margin: 11px 0 0;
+    max-width: unset;
+}
+.cta-evnt-content{
+    max-width: 90%;
+}
+.btns-a {
+    font-size: 12px;
+    /*padding: 12px 12px;*/
+}
+.spal-big-title {
+font-size: 25px;
+}
+.abt-event-sec .img-right img {
+    height: auto;
+    object-fit: cover;
+}
+.new-sevices {
+    padding: 3rem 0 2rem
+}
+.marriage span{
+        height: 35px;
+    width: 35px;
+    min-width: 35px;
+}
+.marriage{
+    align-items: flex-end;
+    gap: 10px;
+    margin: 15px 0 0;
+}
+.marriage h4 {
+    font-size: 15px;
+}
+.why-chse-secton{
+        padding: 3rem 0;
+}
+.why-chse-secton .sec-big-title.text-center{
+    margin-bottom: 1.9rem;
+}
+.section-why-chse {
+    text-align: center;
+    padding: 20px 10px;
+}
+.section-why-chse {
+    border-right: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+.section-why-chse .service-icon {
+           font-size: 16px;
+        font-weight: 500;
+}
+.section-why-chse p {
+   margin:0;
+}
+.why-chse-secton .service-icon {
+            margin-bottom: 4px;
+}
+.why-chse-img {
+          margin-bottom: 10px;
+        display: inline-block;
+}
+.why-chse-img img{
+        width: 40px;
+}
+.conferences {
+           margin: 0;
+}
+.section-service-provide{
+    padding: 20px 15px;
+    border-radius: 12px;
+    width: unset;
+}
+.offer-cnt-para p{
+    text-align:justify;
+}
+.section-service-provide .row{
+    row-gap:30px;
+}
+.section-service-provide h4 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 11px;
+}
+.section-service-provide p {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+.our-ser{
+    position: relative;
+    margin: 30px 0 0;
+}
+
+.sub-prvde {
+    margin-left: unset;
+}
+.gallery-celebrations {
+         padding: 0 0 3rem;
+}
+.gallery-celebrations .section-title{
+  position: relative;
+        padding: 0 0 0;
+}
+   
+.stars i {
+    color: #e65301;
+    font-size: 14px;
+}
+.profile img {
+        width: 43px;
+    height: 43px;
+}
+.cal-swedt{
+  gap: 13px;
+}
+.faq-sec-main{
+          padding: 3rem 0 2rem;
+}
+.faq-sec-main .offset-1{
+        margin-left: unset;
+}
+.faq-sec-main .accordion-button {
+            padding: 9px 11px;
+        border: none;
+        font-size: 14px;
+        line-height: 1.6;
+}
+.faq-sec-main .sec-big-title.text-center{
+            margin-bottom: 2.5rem;
+}
+.accordion-body {
+    padding: 11px;
+        /* line-height: 1.6; */
+    font-size: 13px;
+}
+.listsss {
+    padding: 10px 0 0;
+}
+.fot-sections{
+    padding: 2rem 0 0;
+}
+.celebr-ttil {
+    font-size: 38px;
+    margin: 0 0 20px;
+}
+.foot-titls {
+   font-size: 19px;
+    display: inline-block;
+}
+.call-linkds li a, .call-linkds li p{
+        font-size: 13px;
+}
+.foo-linkd li a {
+        font-size: 13px;
+}
+.testimonial-section {
+    padding: 3rem 0 3rem;
+}
+.testimonial-card{
+        padding: 15px;
+}
+.testimonial-card p{
+    margin: 0;
+}
+/*.testimonial-section .testi-mySwiper {*/
+/*    padding-bottom: 0;*/
+/*}*/
+.swiper-horizontal>.swiper-scrollbar, 
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+        height: 1px;
+}
+.sec-small-title{
+    font-size: 13px;
+}
+.btns-a i {
+    font-size: 18px;
+    right: 12px;
+    top: 12.5px;
+}
+.evnt-planerss {
+          padding: 30px 0 30px;
+}
+.evnt-planerss .sec-big-title.text-center {
+        margin-bottom: 1.2rem;
+    }
+.event-managemt-contadf {
+    padding: 3rem 0 3rem;
+}
+.contact-service-box{
+        padding: 24px 0 20px;
+}
+.contact-icon:after{
+    width: 55px;
+    height: 54px;
+    top: -4px;
+    left: -5px;
+    right: 0;
+    border: 1px solid #ffff;
+}
+.contact-icon{
+     width: 45px;
+    height: 45px;
+    line-height: 54px;
+    font-size: 20px;
+}
+.contact-service-box {
+           padding: 23px 0 20px;
+        margin-bottom: 0;
+        border-bottom: 1px solid #ffffff3b;
+}
+.our-contact-grfdm{
+    padding: 2rem 1.5rem;
+}
+.our-contacus-fomsec .form-box input,
+.our-contacus-fomsec .form-select{
+    padding: 9px 15px;
+        font-size: 12px;
+}
+.our-contacus-fomsec .section-title{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.submit-button .sec-small-title{
+    width:100%;
+    justify-content: space-around;
+}
+.sec-heading {
+    color: var(--primary-color);
+    font-size: 13px;
+}
+.contact-service-box:before{
+    display:none;
+}
+.contact-address .white {
+    color: #fff;
+            font-size: 13px;
+}
+.contact-address {
+    position: relative;
+    margin: 20px 0 0;
+}
+.contact-address a{
+ font-size: 14px;
+}
+.contact-address p {
+    margin: 0;
+    font-size: 13px;
+}
+.what-we-prvde {
+        padding: 3rem 0 2rem;
+}
+.what-we-prvde .row.align-items-center{
+    flex-direction: column-reverse;
+}
+.cta-evnt-content .btns-a i {
+             font-size: 18px;
+        right: 12px;
+        top: 11.5px;
+    }
+.cta-eent-section .cal-swedt .btns-a{
+           padding: 13px 17px;
+}
+.marriage a{
+    font-size:15px;
+}
+.marriage span img{
+    width: 20px;
+}
+
+.servicsesd .swiper-button-next:after, .servicsesd .swiper-button-prev:after{
+        font-size: 9px;
+}
+.servicsesd .swiper-button-next, .servicsesd .swiper-button-prev{
+           height: 30px;
+        width: 30px;
+}
+
+.new-sevices .section-title {
+    margin-bottom: 2rem;
+}
+.section-heading {
+    margin-bottom: 37px;
+}
+.copr-webs p{
+          font-size: 15px;
+        text-align: center;
+        margin: 0.3rem 0 0;
+}
+.copr-webs a{
+    font-size: 14px; 
+}
+.copr-webs{
+          padding: 1rem 0 1rem;
+        text-align: center;
+        justify-content: space-around;
+}
+.how-we-img{
+        margin: 21px 0;
+}
+.perfectin {
+    padding: 2rem 0 2rem;
+    position: relative;
+}
+.plnning-expwets {
+    padding: 3rem 0 0;
+    position: relative;
+}
+   .planning-service-swiper .swiper-wrapper{
+        margin:30px 0 50px;
+}
+ .foo-linkd {
+    padding: 0;
+    margin: 10px 0;
+}
+
+ 
+}
+
+
+
+@media(min-width:769px) and (max-width:900px){ 
+    p {
+    font-size: 14px;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .banne-rtitlsd{
+            font-size: 35px;
+    }
+    .img-right img{
+       height: 500px;
+       margin: 20px 0 0;
+    }
+    
+    .abt-event-sec .sec-big-title {
+    font-size: 25px;
+}
+.breadcrumbs-sections{
+            padding: 4rem 0;
+}
+.servicsesd .swiper-button-prev {
+    left: unset;
+}
+.servicsesd .swiper-button-next{
+        right: 12px;
+}
+.servicsesd .swiper-button-next, .servicsesd .swiper-button-prev{
+    height: 33px; 
+    width: 33px;
+}
+.sec-big-title.text-center{
+        margin-bottom: 1.5rem;
+}
+.brudembs-menus{
+    text-align:center;
+}
+.breadcrumb-list-menu{
+   font-size: 16px;
+    padding: 11px 10px;
+}
+.planning-outr-box{
+    padding:20px;
+}
+.evnt-planerss .row {
+    row-gap: 10px;
+}
+.ser-csr-overlays{
+    padding: 4px;
+}
+.new-sevices {
+    position: relative;
+    padding: 2rem 0;
+}
+.spal-big-title{
+        font-size: 32px;
+}
+  .header-btn .btns-a{
+      display:none;
+  }  
+  .top-bar{
+       display:none;
+  }
+  .hero-content{
+        min-height: 36vh;
+  }
+  .banne-rtitlsd1{
+      font-size:43px;
+  }
+  .banne-rtitlsd br{
+      display:none;
+  }
+    .img-sectuion img{
+        display:none;
+    }
+    .section-why-chse {
+    text-align: center;
+    padding: 0;
+}
+.section-why-chse {
+         text-align: center;
+        padding: 20px 0 20px;
+}
+.why-chse-img img{
+    width: 34px;
+    padding-right: 4px;
+}
+.sec-big-title{
+    font-size: 26px;
+}
+.why-chse-secton .service-icon {
+    margin-bottom: 9px;
+}
+.service-icon {
+  font-size: 15px;
+    font-weight: 700;
+    display: inline-block;
+}
+.faq-sec-main .accordion-button:not(.collapsed) {
+    background-color: #e65402;
+    color: #FFF;
+    font-size: 16px;
+}
+.faq-sec-main .accordion-button{
+        padding: 10px 15px;
+    border: none;
+    font-size: 15px;
+}
+.service-icon  img{
+    width:45px;
+}
+.section-service-provide{
+        width: 100%;
+}
+.sub-prvde {
+    margin-left: unset;
+}
+.section-service-provide.section-service-provide-two {
+    margin-left: 0 !important;
+}
+.sec-small-title{
+    font-size: 14px;
+}
+.what-we-prvde {
+    padding: 4rem 0 0;
+}
+.testimonial-section{
+        padding: 2rem 0 2rem;
+}
+.servicsesd{
+        padding: 2rem 0 2rem;
+}
+.why-chse-secton{
+        padding: 3rem 0;
+}
+.stars i {
+    color: #e65301;
+    font-size: 17px;
+}
+.faq-sec-main {
+    position: relative;
+    padding: 2.5rem 0;
+}
+.cta-evnt-content {
+    max-width: unset;
+}
+.celebr-ttil {
+    position: relative;
+           font-size: 34px;
+}
+.fot-sections .row{
+    row-gap: 30px;
+}
+.img-right:before{
+    width: 87%;
+    height: 86%;
+    bottom: -22px;
+    right: -26px;
+}
+    .why-chse-img {
+              margin: 10px 0;
+        /*display: inline-block;*/
+    }
+.brudembs-menus h1 {
+           font-size: 30px;
+        color: #ffffff;
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 20px;
+        max-width: unset;
+}
+.our-why-chooseus .row{
+        row-gap: 16px;
+    justify-content: center;
+}
+.cta-evnt-content .white {
+    color: #fff;
+    max-width: 75%;
+    margin: auto;
+}
+.cal-swedt{
+        margin: 20px 0 0;
+}
+.faq-sec-main .offset-1{
+    margin-left:unset;
+}
+.call-linkds{
+     margin: 20px 0 0;
+}
+.ideal-clientt{
+    padding: 18px;
+}
+.consultion span {
+           height: 35px;
+        width: 35px;
+        font-size: 18px;
+}
+.choose-cons img {
+        width: 29px !important;
+}
+.organise-evntss .service-icon{
+    font-size: 17px;
+}
+.how-weee{
+    max-width:unset;
+        margin-left: unset;
+}
+.choose-cons {
+          width: 55px;
+        height: 55px;
+}
+.why-us-contetn p{
+max-width: unset;
+    margin: 20px 0 0;
+}
+.why-us-contetn h4{
+           font-size: 17px;
+        margin: 0;
+        max-width: unset;
+}
+.our-why-chooseus{
+        position: relative;
+    padding: 4rem 0 3rem;
+}
+.our-why-chooseus .sec-big-title.text-center{
+    margin-bottom: 2.5rem;
+}
+
+.planning-outr-box .title {
+    font-size: 18px;
+    text-align: start;
+}
+.clients-ser-list li{
+    font-size: 14px;
+}
+.organise-evntss .sec-big-title {
+    font-size: 24px;
+}
+    .sectorss-icon img{
+   width: 33px;
+}
+/*.btns-a{*/
+/*   padding: 11px 16px;*/
+/*        position: relative;*/
+/*        padding-right: 16px;*/
+/*        font-size: 14px;*/
+/*}*/
+.mobile-menu-top i {
+        font-size: 26px;
+        color: #e65402;
+    }
+    .contact-icon:after{
+            width: 76px;
+    height: 76px;
+        top: -7px;
+    left: -7px;
+    }
+    .contact-icon{
+            width: 61px;
+        height: 61px;
+        line-height: 68px;
+        font-size: 26px;
+    }
+    .contact-address .white {
+    color: #fff;
+    font-size: 14px;
+}
+.contact-address h5{
+    font-size: 18px !important;
+}
+.our-contact-grfdm{
+     padding: 20px;
+}
+.our-contacus-fomsec .form-box input, 
+.our-contacus-fomsec .form-select{
+    padding: 15px 12px;
+        font-size: 13px;
+}
+.why-chooseus-bocx {
+        padding: 17px 24px 27px;
+}
+.sectorss-icon {
+    margin-bottom: 14px;
+    display: inline-block;
+    padding-right: 0.5rem;
+}
+.organise-evntss {
+    position: relative;
+    padding: 3rem 0 3rem;
+}
+.evnt-planerss {
+          padding: 40px 0;
+}
+.ser-cardsd img {
+    height: auto;
+    object-fit: cover;
+}
+.ser-csr-overlays h4{
+            font-size: 13px;
+}
+.plnning-expwets {
+    padding: 3rem 0 0;
+    position: relative;
+}
+.site-icon-aac{
+        top: 24%;
+}
+.abt-event-sec {
+    padding: 3rem 0 2.5rem;
+
+}
+.contact-service-box{
+    padding: 30px 0 0;
+    margin: 0 0 20px;
+}
+.event-managemt-contadf .contact-info_item{
+    justify-content:center !important;
+}
+.contact-service-box:nth-child(2)::before {
+  content: none; /* Hide the ::before content on the second child */
+}
+.our-contact-grfdm .sec-big-title {
+        font-size: 22px;
+    }
+    
+    
+    .what-we-prvde .row.align-items-center{
+    flex-direction: column-reverse;
+}
+.our-ser{
+gap: 20px;
+    padding-right: 20px;
+        flex-direction: unset;
+}
+.section-service-provide{
+            margin: 20px 0 0;
+        height: 350px;
+        padding: 15px;
+}
+    
+    
+        .mobile-menu-top {
+        position: absolute;
+        right: 27px;
+        top: 29px;
+        z-index: 999;
+    }
+    
+  .cta-evnt-content .btns-a{
+              padding: 12px 36px 11px 16px;
+    }
+    .btns-a i{
+        right: 13px;
+    top: 11.5px;
+    }
+    .foo-linkd li a{
+        font-size: 14px;
+    }
+    .marriage h4{
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.what-we-prvde::before{
+        width: 500px;
+    height: 500px;
+}
+
+
+.section-service-provide h4{
+        font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    line-height: 1.3;
+}
+.weding {
+    padding: 3rem 0 0;
+    position: relative;
+}
+.msiion {
+    padding: 15px;
+    border-bottom: 3px solid #e65402;
+    height: 100%;
+}
+.msiion h4{
+        font-size: 19px;
+}
+.new-standres .row {
+    row-gap: 15px;
+}
+.brandung{
+        padding: 15px;
+    width: 149px;
+        text-align: center;
+}
+.brandung img {
+        margin-bottom: 10px;
+            width: 45px;
+}
+.brandung h4 {
+    margin: 0;
+    font-size: 15px;
+}
+.testimonial-card{
+    height: 360px;
+}
+.new-standres {
+    padding: 3rem 0 0;
+    position: relative;
+}
+.personal-famuly{
+    
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+}
+
+
+@media(min-width:901px) and (max-width:1200px){ 
+    body{
+            overflow-x: clip;
+    }
+    p {
+    font-size: 15px;
+    }
+    .top-bar{
+        display:none;
+    }
+    .header-btn .btns-a{
+         display:none;
+    }
+    .brudembs-menus h1 {
+    font-size: 30px;
+    max-width: 47%;
+}
+.breadcrumb-list-menu{
+           padding: 9px 9px 10px;
+}
+.sec-big-title1{
+    font-size: 30px;
+}
+.consultion span {
+    height: 45px; 
+    width: 44px;
+    font-size: 22px;
+}
+.organise-evntss .service-icon{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.why-chooseus-bocx{
+    padding: 20px;
+}
+.why-us-contetn h4{
+          font-size: 16px;
+}
+.our-why-chooseus{
+        padding: 3rem 0 3rem;
+}
+.our-why-chooseus .sec-big-title.text-center{
+        margin-bottom: 2.4rem;
+}
+.cta-evnt-content .btns-a{
+    padding: 10px 18px;
+    font-size: 14px;
+}
+.choose-cons{
+    width: 62px;
+    height: 62px;
+}
+.why-us-contetn p{
+        max-width: unset;
+    font-size: 14px;
+}
+.choose-cons img{
+    width: 30px !important;
+}
+.cta-evnt-content {
+    max-width: 75%;
+}
+.sec-big-title{
+    font-size: 34px;
+}
+.celebr-ttil{
+    font-size: 52px;
+}
+.foo-linkd li a{
+        font-size: 13px;
+}
+.foot-titls {
+
+    font-size: 1.3rem;
+}
+.copr-webs {
+        margin-top: 1rem;
+}
+.copr-webs p, .copr-webs a{
+        font-size: 13px;
+}
+    .mobile-menu-top {
+        right: 45px;
+    }
+
+.ideal-clientt{
+        padding: 20px;
+}
+.service-icon {
+    font-size: 17px;
+}
+.clients-ser-list li{
+        font-size: 15px;
+}
+.planning-outr-box{
+        padding: 20px;
+}
+    .consultion span {
+        height: 40px;
+        width: 40px;
+        font-size: 20px;
+    }
+    .contact-service-box:before{
+            right: -13px;
+    top: 92px;
+    }
+    .contact-address a{
+            font-size: 14px;
+    }
+    .contact-service-box{
+            text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 60px 0 30px;
+    }
+    .servicsesd .swiper-button-prev {
+    left: 11px;
+}
+.servicsesd .swiper-button-next {
+    right: 12px;
+}
+.ser-csr-overlays h4{
+    font-size: 16px;
+}
+.testimonial-card {
+        padding: 17px;
+}
+.stars {
+    color: #ff4d00;
+    font-size: 1px;
+    margin-bottom: 0;
+}
+.deqaler-meety {
+    padding: 2rem 0;
+    position: relative;
+}
+.plnning-expwets {
+    padding: 3rem 0 0;
+    position: relative;
+}
+.sec-big-title.text-center {
+    margin-bottom: 1.4rem;
+}
+.evnt-planerss .row {
+    row-gap: 10px;
+}
+.how-weee{
+        max-width: unset;
+}
+.ideal-clientt img{
+    width:45px;
+}
+.accordion-button{
+    padding: 14px 16px;
+}
+.our-ser{
+        display: unset;
+}
+
+}
+
+
+@media (max-width: 1200px){
+    
+    
+     .mega-menu .nav-links{
+         display: block;
+         padding: 0;
+        margin: 30px 0;
+        gap: 10px !important;
+        width: 100%;
+    }
+    
+    .main-header nav .nav-links {
+        flex-direction: column;
+        align-items: start;
+        margin-top: 15px;
+    }
+   
+    .mega-menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        width: 100%;
+        height: 100vh;
+        background: #ffff;
+        transform: translateX(100%);
+        transition: 0.4s linear;
+        visibility: hidden;
+        opacity: 0;
+        z-index:999;
+    }
+    
+     .mega-menu.shows{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu-bar > li {
+        padding: 14px 0;
+    }
+    .mobile-menu-top{
+       position: absolute;
+        right: 27px;
+        top: 24px;
+        z-index: 999;
+    }
+    
+    .mobile-menu-top, 
+    .mobile-menu-open {
+    display:block;
+    }
+    .mobile-menu-open{
+        position: absolute;
+        right: 24px;
+        top: 20px;
+        z-index: 999;
+    }
+    .mobile-menu-open i{
+    font-size: 22px;
+    color: #e65402; 
+    }
+    .mobile-menu-top i{
+        font-size: 22px;
+        color: #e65402;
+    }
+    
+    
+    .nav-links .dropdownsd{
+            padding: 0;
+    }
+    
+    /*.nav-links .dropdownsd:before{*/
+    /*    right: -5px;*/
+    /*top: 3px;*/
+    /*}*/
+    .nav-links .dropdownsd:before{
+        display:none !important;
+    }
+    .main-header nav .nav-links > li > a{
+            font-size: 13px;
+    }
+    
+    
+    .nav-links .dropdownsd .submenu{
+        position: relative;
+        top:10px;
+        visibility: visible;
+        width: 100%;
+       height: 400px;
+        left: 0;
+        opacity: 1;
+        border-radius: 0;
+        margin: 0 0 10px;
+        display: none;
+        height: 400px;
+        overflow-y: scroll;
+    padding: 0;
+    }
+    .nav-links .dropdownsd .submenu li {
+        padding: 4px 11px;
+}
+
+ .submenu.visible {
+        display: block !important;
+    }
+
+.headwer-nav li a{
+        font-size: 14px;
+}
+
+    .dropdownsd .dropn-btnmobile {
+        position: absolute;
+        right: 0;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        line-height: 40px;
+        top: 5px;
+        background: var(--primary-color);
+        display: block;
+        border-radius: 50%;
+    }
+    .dropdownsd .dropn-btnmobile i {
+        color: #fff;
+        top: -5px;
+        position: relative;
+    }
+    
+  .main-header nav .nav-links > li {
+        margin: unset;
+        width: 100%;
+    padding: 10px 0 0;
+} 
+
+.call.whatsapp{
+     display:block;
+}
+
+}
