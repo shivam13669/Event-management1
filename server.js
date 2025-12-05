@@ -1,31 +1,65 @@
-const express = require('express');
-const path = require('path');
-const fs = require('fs');
+import express from 'express';
+import path from 'path';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = 3000;
 
-const sitePath = path.join(__dirname, 'Event/www.chennaieventmanagementservice.com');
+// Serve all static files from Event directory
+const eventDir = path.join(__dirname, 'Event/www.chennaieventmanagementservice.com');
 
-app.use(express.static(sitePath));
+// Middleware to serve static files
+app.use(express.static(eventDir));
 
+// Handle all other routes - serve HTML files
 app.get('*', (req, res) => {
-  const filePath = path.join(sitePath, req.path);
+  let filePath = path.join(eventDir, req.path);
 
+  // If it's a directory, try index.html
   if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
-    const indexPath = path.join(filePath, 'index.html');
-    if (fs.existsSync(indexPath)) {
-      return res.sendFile(indexPath);
+    filePath = path.join(filePath, 'index.html');
+  }
+
+  // If no extension, try adding .html
+  if (!path.extname(filePath)) {
+    if (!fs.existsSync(filePath) && fs.existsSync(filePath + '.html')) {
+      filePath = filePath + '.html';
     }
   }
 
+  // Check if file exists and serve it
   if (fs.existsSync(filePath)) {
+    const ext = path.extname(filePath).toLowerCase();
+    const mimeTypes = {
+      '.html': 'text/html; charset=utf-8',
+      '.css': 'text/css; charset=utf-8',
+      '.js': 'application/javascript',
+      '.json': 'application/json',
+      '.webp': 'image/webp',
+      '.svg': 'image/svg+xml',
+      '.png': 'image/png',
+      '.jpg': 'image/jpeg',
+      '.jpeg': 'image/jpeg',
+      '.gif': 'image/gif',
+      '.ico': 'image/x-icon',
+      '.woff': 'font/woff',
+      '.woff2': 'font/woff2',
+      '.ttf': 'font/ttf',
+      '.eot': 'application/vnd.ms-fontobject',
+    };
+
+    res.setHeader('Content-Type', mimeTypes[ext] || 'application/octet-stream');
     return res.sendFile(filePath);
   }
 
+  // File not found
   res.status(404).send('Not Found');
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });
