@@ -5,22 +5,24 @@ const fs = require('fs');
 const app = express();
 const PORT = 3000;
 
-app.use(express.static('.'));
+const sitePath = path.join(__dirname, 'Event/www.chennaieventmanagementservice.com');
+
+app.use(express.static(sitePath));
 
 app.get('*', (req, res) => {
-  const filePath = path.join(__dirname, req.path);
-  
+  const filePath = path.join(sitePath, req.path);
+
   if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
     const indexPath = path.join(filePath, 'index.html');
     if (fs.existsSync(indexPath)) {
       return res.sendFile(indexPath);
     }
   }
-  
+
   if (fs.existsSync(filePath)) {
     return res.sendFile(filePath);
   }
-  
+
   res.status(404).send('Not Found');
 });
 
