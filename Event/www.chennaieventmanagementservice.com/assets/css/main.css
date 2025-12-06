@@ -1,4 +1,3 @@
-
 .breadcrumbs-sections {
     background: #010101;
     position: relative;
@@ -223,7 +222,7 @@ background-color: #fce9de;
     /*display:none;*/
 }
 .call.whatsapp{
-     display:none;
+     display:block;
 }
 .cta-evnt-content .btns-wp{
     background: #25D366;
