@@ -108,6 +108,6 @@ app.use((req, res, next) => {
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
-  console.log(`Chennai site: http://localhost:${PORT}/`);
-  console.log(`MPL site: http://localhost:${PORT}/?site=mpl`);
+  console.log(`MPL site (default): http://localhost:${PORT}/`);
+  console.log(`Chennai site: http://localhost:${PORT}/?site=chennai`);
 });
