@@ -34,11 +34,7 @@ const imageMapping = {
 
 // Determine which site to serve
 function getSiteDir(req) {
-  const isChennai = req.query.site === 'chennai';
-
-  if (isChennai) {
-    return path.join(__dirname, 'Event/www.chennaieventmanagementservice.com');
-  }
+  // Only serve MPL Event Management
   return path.join(__dirname, 'Event/www.mpleventmanagement.com');
 }
 
