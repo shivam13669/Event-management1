@@ -23,6 +23,15 @@ const replacements = {
   'Chennai,': 'Mumbai & Mithila Region,'
 };
 
+// Image URL mapping for MPL (using royalty-free images)
+const imageMapping = {
+  'msc-annual-16th-year.webp': 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg',
+  'msc-annual-event.webp': 'https://images.pexels.com/photos/7648319/pexels-photo-7648319.jpeg',
+  '60th-birthday-event.webp': 'https://images.pexels.com/photos/1729808/pexels-photo-1729808.jpeg',
+  'wedding-eventsssss.webp': 'https://images.pexels.com/photos/35046242/pexels-photo-35046242.jpeg',
+  'event-management-company.webp': 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg'
+};
+
 // Determine which site to serve
 function getSiteDir(req) {
   const isMPL = req.query.site === 'mpl' || req.path.startsWith('/mpl');
