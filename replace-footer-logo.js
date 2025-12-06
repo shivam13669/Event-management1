@@ -1,5 +1,8 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const oldUrl = 'https://cdn.builder.io/api/v1/image/assets%2Ffacb77d3c6da4b4083bc8acea6edc977%2Feab5b57fd00c45dea4caa42f22a20f2c?format=webp&width=800';
 const newUrl = 'https://cdn.builder.io/api/v1/image/assets%2F778fc7d34fc54ef5aa2bc33b16d01d8f%2F78f55454a26342d2be3e1dda7a93ed01?format=webp&width=800';
@@ -94,7 +97,7 @@ let updated = 0;
 let failed = 0;
 
 filesToUpdate.forEach(file => {
-  const filePath = path.join(process.cwd(), file);
+  const filePath = path.join(__dirname, file);
   
   try {
     let content = fs.readFileSync(filePath, 'utf8');
