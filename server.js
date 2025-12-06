@@ -34,8 +34,8 @@ const imageMapping = {
 
 // Determine which site to serve
 function getSiteDir(req) {
-  // Only serve MPL Event Management
-  return path.join(__dirname, 'Event/www.mpleventmanagement.com');
+  // Serve MPL Event Management
+  return path.join(__dirname, 'Event/www.chennaieventmanagementservice.com');
 }
 
 // Middleware to serve all requests
