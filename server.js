@@ -94,6 +94,12 @@ app.use((req, res, next) => {
         content = content.replace(new RegExp(oldStr.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), newStr);
       }
 
+      // Replace image URLs with royalty-free versions
+      for (const [oldImg, newImg] of Object.entries(imageMapping)) {
+        const imgRegex = new RegExp(`assets/images/(?:bg|service-details)/${oldImg.replace(/\./g, '\\.')}`, 'g');
+        content = content.replace(imgRegex, newImg);
+      }
+
       // Inject custom MPL CSS
       content = content.replace(
         '</head>',
