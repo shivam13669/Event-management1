@@ -34,12 +34,12 @@ const imageMapping = {
 
 // Determine which site to serve
 function getSiteDir(req) {
-  const isMPL = req.query.site === 'mpl' || req.path.startsWith('/mpl');
-  
-  if (isMPL) {
-    return path.join(__dirname, 'Event/www.mpleventmanagement.com');
+  const isChennai = req.query.site === 'chennai';
+
+  if (isChennai) {
+    return path.join(__dirname, 'Event/www.chennaieventmanagementservice.com');
   }
-  return path.join(__dirname, 'Event/www.chennaieventmanagementservice.com');
+  return path.join(__dirname, 'Event/www.mpleventmanagement.com');
 }
 
 // Middleware to serve all requests
