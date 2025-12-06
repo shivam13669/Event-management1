@@ -9,39 +9,11 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = 3000;
 
-// Content replacements for MPL branding
-const replacements = {
-  'Chennai Event Management': 'MPL Event Management',
-  'Chennai Events Management': 'MPL Event Management',
-  'info@chennaieventmanagementservice.com': 'contact@mplevent.com',
-  '+91 98414 35108': '+91 9769511851',
-  '+91-98414-35108': '+91-9769511851',
-  '98414 35108': '9769511851',
-  'www.chennaieventmanagementservice.com': 'www.mpleventmanagement.com',
-  'Orchestrating Corporate Excellence': 'Seamless Events, Lasting Memories',
-  'in Chennai': ' - MPL Event Management',
-  'Chennai,': 'Mumbai & Mithila Region,'
-};
-
-// Image URL mapping for MPL (using royalty-free images)
-const imageMapping = {
-  'msc-annual-16th-year.webp': 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg',
-  'msc-annual-event.webp': 'https://images.pexels.com/photos/7648319/pexels-photo-7648319.jpeg',
-  '60th-birthday-event.webp': 'https://images.pexels.com/photos/1729808/pexels-photo-1729808.jpeg',
-  'wedding-eventsssss.webp': 'https://images.pexels.com/photos/35046242/pexels-photo-35046242.jpeg',
-  'event-management-company.webp': 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg'
-};
-
-// Determine which site to serve
-function getSiteDir(req) {
-  // Serve MPL Event Management
-  return path.join(__dirname, 'Event/www.chennaieventmanagementservice.com');
-}
+// Serve MPL Event Management from www.chennaieventmanagementservice.com folder
+const siteDir = path.join(__dirname, 'Event/www.chennaieventmanagementservice.com');
 
 // Middleware to serve all requests
 app.use((req, res, next) => {
-  const siteDir = getSiteDir(req);
-  
   let filePath = req.path;
   if (!filePath) filePath = '/';
   
@@ -80,7 +52,6 @@ app.use((req, res, next) => {
       '.eot': 'application/vnd.ms-fontobject',
     };
 
-
     res.setHeader('Content-Type', mimeTypes[ext] || 'application/octet-stream');
     return res.sendFile(filePath);
   }
@@ -91,5 +62,5 @@ app.use((req, res, next) => {
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
-  console.log(`Serving MPL Event Management only`);
+  console.log(`Serving MPL Event Management`);
 });
