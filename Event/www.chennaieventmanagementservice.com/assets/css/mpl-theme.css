@@ -8,15 +8,14 @@
 
 /* Logo */
 .logo-img {
-    display: none;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 400px;
 }
 
 .logo::before {
-    content: 'M';
-    font-size: 36px;
-    font-weight: bold;
-    color: var(--primary-color);
-    font-family: 'Epunda Slab', serif;
+    display: none;
 }
 
 /* Top Bar */
