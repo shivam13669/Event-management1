@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="delivery-logistics-list">
+  <path fill="#ffda44" d="M3 9h52v42H3z"></path>
+  <path fill="#e0e0e2" d="M31 24h30v36H31z"></path>
+  <path fill="#2488ff" d="M51 54h3v3h-3z"></path>
+  <path fill="#005ece" d="M51 40h3v14h-3z"></path>
+  <path fill="#2488ff" d="M55 31v9h-5v-9h5z"></path>
+  <path fill="#a78966" d="M52 21v6H41v-6h3v-.5a2.5 2.5 0 0 1 5 0v.5Z"></path>
+  <path fill="#d80027" d="M8 37h6v6H8z"></path>
+  <path fill="#fff" d="M18 42h9v2h-9zM18 36h4v2h-4z"></path>
+  <path fill="#1a6fb0" d="M37 36a1 1 0 0 1-.707-.293l-2-2 1.414-1.414L37 33.586l3.293-3.293 1.414 1.414-4 4A1 1 0 0 1 37 36ZM42 34h6v2h-6zM37 45a1 1 0 0 1-.707-.293l-2-2 1.414-1.414L37 42.586l3.293-3.293 1.414 1.414-4 4A1 1 0 0 1 37 45ZM42 43h6v2h-6zM37 53a1 1 0 0 1-.707-.293l-2-2 1.414-1.414L37 50.586l3.293-3.293 1.414 1.414-4 4A1 1 0 0 1 37 53ZM42 51h6v2h-6z"></path>
+  <path fill="#3e3d42" d="M59 39h-2v-6h-2v-2h3a1 1 0 0 1 1 1Z"></path>
+  <path fill="#005ece" d="M51 32h1v5h-1z"></path>
+  <path fill="#003f8a" d="M51 40h3v1h-3z"></path>
+  <rect width="4" height="2" x="42" y="22" fill="#b39a7c" rx="1"></rect>
+  <path fill="#957856" d="M3 9h52v1H3z"></path>
+  <path fill="#ff9811" d="M3 3h22v6H3zM33 3h22v6H33z"></path>
+  <path fill="#d80027" d="M33 3v13l-4-2-4 2V3h8z"></path>
+  <rect width="10" height="3" x="5" y="4" fill="#ffad41" rx="1.5"></rect>
+</svg>
