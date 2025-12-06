@@ -80,18 +80,6 @@ app.use((req, res, next) => {
       '.eot': 'application/vnd.ms-fontobject',
     };
 
-    // For HTML files, apply replacements if Chennai site requested
-    if (ext === '.html' && req.query.site === 'chennai') {
-      let content = fs.readFileSync(filePath, 'utf-8');
-
-      // Apply reverse replacements (MPL to Chennai)
-      for (const [oldStr, newStr] of Object.entries(replacements)) {
-        content = content.replace(new RegExp(newStr.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), oldStr);
-      }
-
-      res.setHeader('Content-Type', mimeTypes[ext]);
-      return res.send(content);
-    }
 
     res.setHeader('Content-Type', mimeTypes[ext] || 'application/octet-stream');
     return res.sendFile(filePath);
