@@ -9,15 +9,39 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = 3000;
 
-// Serve all static files from Event directory
-const eventDir = path.join(__dirname, 'Event/www.chennaieventmanagementservice.com');
+// Content replacements for MPL branding
+const replacements = {
+  'Chennai Event Management': 'MPL Event Management',
+  'Chennai Events Management': 'MPL Event Management',
+  'info@chennaieventmanagementservice.com': 'contact@mplevent.com',
+  '+91 98414 35108': '+91 9769511851',
+  '+91-98414-35108': '+91-9769511851',
+  '98414 35108': '9769511851',
+  'www.chennaieventmanagementservice.com': 'www.mpleventmanagement.com',
+  'Orchestrating Corporate Excellence': 'Seamless Events, Lasting Memories',
+  'in Chennai': ' - MPL Event Management',
+  'Chennai,': 'Mumbai & Mithila Region,'
+};
+
+// Determine which site to serve
+function getSiteDir(req) {
+  const isMPL = req.query.site === 'mpl' || req.path.startsWith('/mpl');
+  
+  if (isMPL) {
+    return path.join(__dirname, 'Event/www.mpleventmanagement.com');
+  }
+  return path.join(__dirname, 'Event/www.chennaieventmanagementservice.com');
+}
 
 // Middleware to serve static files
-app.use(express.static(eventDir));
-
-// Handle all other routes - serve HTML files
-app.get('*', (req, res) => {
-  let filePath = path.join(eventDir, req.path);
+app.use((req, res, next) => {
+  const siteDir = getSiteDir(req);
+  
+  // Adjust path if it starts with /mpl
+  let filePath = req.path.startsWith('/mpl') ? req.path.slice(4) : req.path;
+  if (!filePath) filePath = '/';
+  
+  filePath = path.join(siteDir, filePath);
 
   // If it's a directory, try index.html
   if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
@@ -52,6 +76,19 @@ app.get('*', (req, res) => {
       '.eot': 'application/vnd.ms-fontobject',
     };
 
+    // For HTML files, apply replacements if MPL site
+    if (ext === '.html' && req.query.site === 'mpl') {
+      let content = fs.readFileSync(filePath, 'utf-8');
+      
+      // Apply all replacements
+      for (const [oldStr, newStr] of Object.entries(replacements)) {
+        content = content.replace(new RegExp(oldStr.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), newStr);
+      }
+      
+      res.setHeader('Content-Type', mimeTypes[ext]);
+      return res.send(content);
+    }
+
     res.setHeader('Content-Type', mimeTypes[ext] || 'application/octet-stream');
     return res.sendFile(filePath);
   }
@@ -62,4 +99,6 @@ app.get('*', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Chennai site: http://localhost:${PORT}/`);
+  console.log(`MPL site: http://localhost:${PORT}/?site=mpl`);
 });
