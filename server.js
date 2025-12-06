@@ -79,12 +79,18 @@ app.use((req, res, next) => {
     // For HTML files, apply replacements if MPL site
     if (ext === '.html' && req.query.site === 'mpl') {
       let content = fs.readFileSync(filePath, 'utf-8');
-      
+
       // Apply all replacements
       for (const [oldStr, newStr] of Object.entries(replacements)) {
         content = content.replace(new RegExp(oldStr.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), newStr);
       }
-      
+
+      // Inject custom MPL CSS
+      content = content.replace(
+        '</head>',
+        '<link rel="stylesheet" href="assets/css/mpl-theme.css" type="text/css" crossorigin="anonymous">\n</head>'
+      );
+
       res.setHeader('Content-Type', mimeTypes[ext]);
       return res.send(content);
     }
