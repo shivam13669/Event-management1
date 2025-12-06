@@ -42,8 +42,7 @@ function getSiteDir(req) {
 app.use((req, res, next) => {
   const siteDir = getSiteDir(req);
   
-  // Adjust path if it starts with /chennai
-  let filePath = req.path.startsWith('/chennai') ? req.path.slice(8) : req.path;
+  let filePath = req.path;
   if (!filePath) filePath = '/';
   
   filePath = path.join(siteDir, filePath);
